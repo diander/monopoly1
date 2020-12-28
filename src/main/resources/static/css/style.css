@@ -1,0 +1,711 @@
+/*
+	Common Colors:
+		
+		LightGreen: #cde6d0
+		Brown: 		#955436
+		LightBlue: 	#aae0fa
+		Magenta:	#d93a96
+		Orange:		#f7941d
+		Red:		#ed1b24
+		Yellow:		#fef200
+		Green:		#1fb25a
+		Blue:		#0072bb
+*/
+html, body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: url('/static/img/background.jpg');
+	background-size: 100% auto;
+	font-family: Kabel;
+	/* Turn off text highlighting for everything */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Chrome/Safari/Opera */
+	-khtml-user-select: none; /* Konqueror */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+									  not supported by any browser */
+}
+
+button {
+	box-shadow: 1px 1px 5px #333;
+	font: 17px Raleway;
+	border: none;
+	padding: 0px 12px;
+	background: #ffffff;
+	background-image: url('/static/img/material.png');
+	background-blend-mode: multiply;
+	height: 32px;
+}
+
+button:hover {
+	background: #f0f0f0;
+	background-image: url('/static/img/material.png');
+}
+
+button:active {
+	box-shadow: 0px 0px 2px #333;
+	background: #e0e0e0;
+	background-image: url('/static/img/material.png');
+}
+
+input {
+	height: 28px;
+	font-size: 20px;
+}
+
+<!--
+More pastel-y versions of the monopoly colors -->.brown {
+	background: #BA907C;
+	background-image: url('/static/img/material.png');
+}
+
+.light-blue {
+	background: #CCECFC;
+	background-image: url('/static/img/material.png');
+}
+
+.magenta {
+	background: #E889C0;
+	background-image: url('/static/img/material.png');
+}
+
+.orange {
+	background: #FABF77;
+	background-image: url('/static/img/material.png');
+}
+
+.red {
+	background: #F4767C;
+	background-image: url('/static/img/material.png');
+}
+
+.red:hover {
+	background: #E87076;
+	background-image: url('/static/img/material.png');
+}
+
+.red:active {
+	background: #DC6A70;
+	background-image: url('/static/img/material.png');
+}
+
+.yellow {
+	background: #FFFA99;
+	background-image: url('/static/img/material.png');
+}
+
+.green {
+	background: #73D99C;
+	background-image: url('/static/img/material.png');
+}
+
+.green:hover {
+	background: #6DCE94;
+	background-image: url('/static/img/material.png');
+}
+
+.green:active {
+	background: #68C38C;
+	background-image: url('/static/img/material.png');
+}
+
+.green-text {
+	color: #136c37;
+}
+
+.red-text {
+	color: #ed1b24;
+}
+
+.blue {
+	background: #59A3D3;
+	background-image: url('/static/img/material.png');
+}
+
+.car {
+	background-image: url('/static/img/car.png');
+	background-size: 100%;
+}
+
+.dog {
+	background-image: url('/static/img/dog.png');
+	background-size: 100%;
+}
+
+.hat {
+	background-image: url('/static/img/hat.png');
+	background-size: 100%;
+}
+
+.iron {
+	background-image: url('/static/img/iron.png');
+	background-size: 100%;
+}
+
+.ship {
+	background-image: url('/static/img/ship.png');
+	background-size: 100%;
+}
+
+.shoe {
+	background-image: url('/static/img/shoe.png');
+	background-size: 100%;
+}
+
+.thimble {
+	background-image: url('/static/img/thimble.png');
+	background-size: 100%;
+}
+
+.wheelbarrow {
+	background-image: url('/static/img/wheelbarrow.png');
+	background-size: 100%;
+}
+
+#menu-toggle {
+	position: absolute;
+	width: 30px;
+	height: 35px;
+	left: 15px;
+	top: 15px;
+	margin: 0;
+	padding: 0;
+	z-index: 100;
+	background: none;
+	border: none;
+}
+
+#menu-toggle img {
+	width: 100%;
+	height: 100%;
+}
+
+#menu {
+	position: absolute;
+	width: 300px;
+	height: 100%;
+	left: -200px;
+	color: #ccc;
+	text-shadow: #ddd;
+	background: rgba(0, 0, 0, 0.8);
+	box-shadow: 2px 2px 8px #000;
+	
+	z-index: 50;
+}
+
+#menu-header {
+	width: 270px;
+	height: 51px;
+	font-size: 30px;
+	text-align: right;
+	vertical-align: center;
+	padding-top: 14px;
+	padding-right: 30px;
+	background: #181822;
+}
+
+#join-background {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.75;
+	z-index: 100;
+}
+
+#join {
+	position: absolute;
+	width: 280px;
+	height: 150px;
+	background: #cde6d0;
+	border: 2px solid #444;
+	box-shadow: 1px 1px 4px #000;
+	z-index: 110;
+	left: 50%;
+	margin-left: -140px;
+	top: 50%;
+	margin-top: -75px;
+}
+
+#join-name {
+	text-align: center;
+}
+
+#join-name h3 {
+	margin: 14px auto;
+}
+
+#join-name input {
+	display: block;
+	text-align: center;
+	margin: auto;
+}
+
+#join-name button {
+	margin: 14px 8px;
+}
+
+#join-token {
+	width: 100%;
+	height: 100%;
+	margin: auto 0;
+}
+
+#join-token table {
+	margin: 10px auto;
+}
+
+#join-token td {
+	width: 60px;
+	height: 60px;
+}
+
+#join-token td:hover {
+	background: #9ac;
+}
+
+#join-token td div {
+	width: 100%;
+	height: 100%;
+}
+
+.token {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #cde6d0;
+	box-shadow: 3px 3px 6px #444;
+	border-radius: 25px;
+	border: 2px solid #222;
+	z-index: 99;
+	pointer-events: none;
+}
+
+#grid {
+	width: 100%;
+	height: 100%;
+}
+
+#board {
+	background: url('/static/img/board.jpg');
+	background-size: 100%;
+	width: 800px;
+	height: 800px;
+	box-shadow: 0px 0px 48px #000;
+	text-align: center;
+}
+
+#ui {
+	
+}
+
+#ui-wrapper {
+	width: 553px;
+	height: 553px;
+	padding: 16px;
+	background: #cde6d0;
+	text-align: left;
+}
+
+#phase-ui {
+	position: relative;
+	width: 100%;
+	height: 50%;
+}
+
+#select-property {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+#select-property div {
+	padding-top: 120px;
+}
+
+#roll {
+	text-align: center;
+}
+
+#roll-text {
+	font-size: 20px;
+}
+
+#roll-text span {
+	color: #0072bb;
+}
+
+#buy-property {
+	height: 100%;
+	width: 100%;
+}
+
+.property-controls {
+	width: 56%;
+	margin-left: 44%;
+	padding-top: 60px;
+}
+
+.property-controls span {
+	display: block;
+	width: 160px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.property-controls button {
+	display: block;
+	width: 160px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.property-controls input {
+	display: block;
+	width: 160px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+#end-turn {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	
+	width: 50px;
+	height: 50px;
+}
+
+#end-turn:hover {
+	background: #AAD4AF;
+}
+
+#sell-property-controls button {
+	display: block;
+	width: 160px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+#players {
+	width: 100%;
+	height: 50%;
+	border: 2px solid #9aa090;
+	box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.player-tile {
+	display: inline-block;
+	width: 245px;
+	height: 102px;
+	margin-left: 20px;
+	margin-top: 20px;
+	background: #AFC5B2;
+	border: 2px solid #243;
+	box-shadow: 0px 0px 10px #444;
+}
+
+.player-tile img {
+	width: 60px;
+	height: 60px;
+	margin-left: 14px;
+	margin-top: 21px;
+	float: left;
+}
+
+.player-tile div {
+	margin-left: 60px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.player-tile div span {
+	
+}
+
+#hover-card {
+	z-index: 20;
+}
+
+#buy-card {
+	z-index: 10;
+	transform: scale(0.85, 0.85);
+    margin-top: -10px;
+    margin-left: 40px;
+}
+
+.card {
+	position: absolute;
+	background: white;
+	box-shadow: 0px 0px 16px #444;
+	border: 3px solid #333;
+	width: 240px;
+	height: 275px;
+	pointer-events: none;
+}
+
+.card-header {
+	margin: 8px 0;
+	height: 45px;
+	border: 3px solid #333;
+	font-family: Kabel;
+	text-align: center;
+}
+
+.card-header-railroad {
+	margin: 7px;
+	text-align: center;
+	font-family: Kabel;
+}
+
+.card-header-utility {
+	margin: 7px;
+	text-align: center;
+	font-family: Kabel;
+}
+
+.property {
+	margin: 8px;
+	font-family: Raleway;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.property>span {
+	display: block;
+	width: 100%;
+}
+
+.property table {
+	border-collapse: collapse;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	width: 175px;
+}
+
+.property td:last-child {
+	text-align: right;
+}
+
+.property p {
+	font-size: 9px;
+	line-height: 10px;
+}
+
+.railroad {
+	margin: 8px;
+	font-family: Raleway;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.railroad>span {
+	display: block;
+	width: 100%;
+}
+
+.railroad table {
+	border-collapse: collapse;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	width: 190px;
+}
+
+.railroad td:last-child {
+	text-align: right;
+}
+
+.railroad p {
+	line-height: 18px;
+}
+
+.utility {
+	margin: 8px;
+	font-family: Raleway;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.utility>span {
+	display: block;
+	width: 100%;
+}
+
+.utility table {
+	border-collapse: collapse;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	width: 190px;
+}
+
+.utility td:last-child {
+	text-align: right;
+}
+
+.utility p {
+	line-height: 18px;
+}
+
+.card-header span {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+}
+
+.card-info {
+	position: absolute;
+	background: #ddd;
+	border: 2px solid black;
+	left: 0px;
+	top: 280px;
+}
+
+#board-grid {
+	float: left;
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+}
+
+.selected {
+	background: url('/static/img/selected.png') !important;
+	background-size: 100% 100% !important;
+}
+
+/* Selecting grid cells */
+.covered {
+	opacity: 0.75;
+	background: black;
+	pointer-events: none;
+}
+#board-grid>tbody>tr>td:not(#ui):hover {
+	opacity: 0.5;
+	background: #466;
+}
+
+@font-face {
+	font-family: Kabel;
+	src: url('/static/ttf/kabel.ttf');
+}
+
+@font-face {
+	font-family: Raleway;
+	src: url('/static/ttf/raleway.ttf');
+}
+
+#dice-main {
+	width: 200px;
+	margin: 30px auto;
+}
+
+#dice-one {
+	background-image: url('/static/img/dice1.png');
+	background-size: 100%;
+	width: 96px;
+	height: 96px;
+	float: left;
+	-moz-box-shadow: inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow: inset 0 0 10px #000000;
+}
+
+#dice-two {
+	background-image: url('/static/img/dice1.png');
+	background-size: 100%;
+	width: 96px;
+	height: 96px;
+	margin-left: 108px;
+	-moz-box-shadow: inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow: inset 0 0 10px #000000;
+}
+
+#waiting {
+	text-align: center;
+	padding-top: 75px;
+}
+
+#jail-choice * {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+#ok-button{
+	margin-top: 20px;
+}
+
+#show-card{
+	background-color: #ff8c00;
+	display: block;
+	padding: 25px;
+	text-align: center;
+	-moz-box-shadow: inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow: inset 0 0 10px #000000;
+}
+
+#endgame{
+	color: #eee;
+	background-color: #0072bb;
+	display: block;
+	padding: 25px;
+	text-align: center;
+	-moz-box-shadow: inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow: inset 0 0 10px #000000;
+}
+
+#cheat-roll{
+	background-color: #a3a375;
+	display: block;
+	padding: 25px;
+	text-align: center;
+	-moz-box-shadow: inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow: inset 0 0 10px #000000;	
+}
+
+.golden {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fceabb+0,fccd4d+50,f8b500+51,fbdf93+100;Orange+3D+%235 */
+	background: #fceabb; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); /* IE6-9 */
+}
+
+.gray {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6f747a+0,828c95+36,28343b+100 */
+	background: #6f747a; /* Old browsers */
+	background: -moz-linear-gradient(top,  #6f747a 0%, #828c95 36%, #28343b 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #6f747a 0%,#828c95 36%,#28343b 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #6f747a 0%,#828c95 36%,#28343b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6f747a', endColorstr='#28343b',GradientType=0 ); /* IE6-9 */
+}
